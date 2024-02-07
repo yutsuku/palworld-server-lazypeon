@@ -1,0 +1,50 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug executable 'palworld-server-lazypeon'",
+            "cargo": {
+                "args": [
+                    "build",
+                    "--bin=palworld-server-lazypeon",
+                    "--package=palworld-server-lazypeon"
+                ],
+                "filter": {
+                    "name": "palworld-server-lazypeon",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}",
+            "env": {
+                "GUILD_ID": "",
+                "DISCORD_TOKEN": "",
+                "SERVER_ROOT": "/workspaces/palworld-server-lazypeon",
+            }
+        },
+        {
+            "type": "lldb",
+            "request": "launch",
+            "name": "Debug unit tests in executable 'palworld-server-lazypeon'",
+            "cargo": {
+                "args": [
+                    "test",
+                    "--no-run",
+                    "--bin=palworld-server-lazypeon",
+                    "--package=palworld-server-lazypeon"
+                ],
+                "filter": {
+                    "name": "palworld-server-lazypeon",
+                    "kind": "bin"
+                }
+            },
+            "args": [],
+            "cwd": "${workspaceFolder}"
+        }
+    ]
+}
